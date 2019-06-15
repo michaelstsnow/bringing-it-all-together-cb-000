@@ -74,7 +74,7 @@ class Dog
     FROM dogs
     WHERE name=? AND breed=?
     SQL
-    dog_row=DB[:conn].execute(sql,name: , breed:).flatten
+    dog_row=DB[:conn].execute(sql,name, breed).flatten
     dog=Dog.new_from_db(dog_row)
   end
 
