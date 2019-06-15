@@ -61,7 +61,7 @@ class Dog
     WHERE id=?
     SQL
     dog_row=DB[:conn].execute(sql,self.id).flatten
-
+    dog=Dog.new_from_db(dog_row)
   end
 
   def self.new_from_db(row)
