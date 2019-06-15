@@ -68,7 +68,7 @@ class Dog
     Dog.new( name:row[1], breed:row[2], id:row[0])
   end
 
-  def find_or_create_by(name:,breed:)
+  def self.find_or_create_by(name:,breed:)
     sql=<<-SQL
     SELECT *
     FROM dogs
