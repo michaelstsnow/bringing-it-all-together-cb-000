@@ -60,7 +60,7 @@ class Dog
     FROM dogs
     WHERE id=?
     SQL
-    dog_row=DB[:conn].execute(sql,self.id)
+    dog_row=DB[:conn].execute(sql,self.id).flatten
 
   end
 
