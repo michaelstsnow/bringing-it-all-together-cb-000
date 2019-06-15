@@ -76,7 +76,7 @@ class Dog
     SQL
     dog_row=DB[:conn].execute(sql,name, breed).flatten
     if dog_row.empty?
-      dog={name: = name, breed: = breed}
+      dog={name: => name, breed: => breed}
       Dog.create(dog)
     else
       dog=Dog.new_from_db(dog_row)
